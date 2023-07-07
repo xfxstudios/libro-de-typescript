@@ -254,13 +254,13 @@ Algunos de los beneficios deTypeScript:
 
 ### TypeScript and JavaScript
 
-TypeScript is written in `.ts` or `.tsx` files, while JavaScript files are written in `.js` or `.jsx`.
+TypeScript se escribe en archivos `.ts` o` .tsx`, mientras que los archivos JavaScript se escriben en `js` o `.jsx`.
 
-Files with the extension `.tsx` or `.jsx` can contain JavaScript Syntax Extension JSX, which is used in React for UI development.
+Los archivos con la extensión `.TSX` o` .JSX` pueden contener JavaScript Syntax Extension JSX, que se utiliza en React para el desarrollo de la interfaz de usuario.
 
-TypeScript is a typed superset of JavaScript (ECMAScript 2015) in terms of syntax. All JavaScript code is valid TypeScript code, but the reverse is not always true.
+TypeScript es un superconjunto escrito de JavaScript (ECMAScript 2015) en términos de sintaxis.Todo el código JavaScript es un código TypeScript válido, pero el reverso no siempre es cierto.
 
-For instance, consider a function in a JavaScript file with the `.js` extension, such as the following:
+Por ejemplo, considere una función en un archivo JavaScript con la extensión `js`, como la siguiente:
 
 <!-- skip -->
 ```typescript
@@ -268,7 +268,7 @@ const sum = (a, b) => a + b;
 
 ```
 
-The function can be converted and used in TypeScript by changing the file extension to `.ts`. However, if the same function is annotated with TypeScript types, it cannot be executed in any JavaScript engine without compilation. The following TypeScript code will produce a syntax error if it is not compiled:
+La función se puede convertir y usar en TypeScript cambiando la extensión del archivo a `.ts`. Sin embargo, si la misma función se anota con tipos de mecanografiado, no se puede ejecutar en ningún motor JavaScript sin compilación. El siguiente código TypeScript producirá un error de sintaxis si no está compilado:
 
 <!-- skip -->
 ```typescript
@@ -276,7 +276,7 @@ const sum = (a: number, b: number): number => a + b;
 
 ```
 
-TypeScript was designed to detect possible exceptions that can occur at runtime during compilation time by having the developer define the intent with type annotations. In addition, TypeScript can also catch issues if no type annotation is provided. For instance, the following code snippet does not specify any TypeScript types:
+TypeScript fue diseñado para detectar posibles excepciones que pueden ocurrir en tiempo de ejecución durante el tiempo de compilación al hacer que el desarrollador defina la intención con las anotaciones de tipo. Además, TypeScript también puede detectar problemas si no se proporciona una anotación de tipo. Por ejemplo, el siguiente fragmento de código no especifica ningún tipo de TypeScript:
 
 <!-- skip -->
 ```typescript
@@ -285,35 +285,36 @@ const result = items.filter(item => item.y);
 
 ```
 
-In this case, TypeScript detects an error and reports:
+En este caso, TypeScript detecta un error e informes:
 
 Property 'y' does not exist on type '{ x: number; }'.
 
-TypeScript's type system is largely influenced by the runtime behavior of JavaScript. For example, the addition operator (+), which in JavaScript can either perform string concatenation or numeric addition, is modeled in the same way in TypeScript:
+El sistema de tipos de TypeScript está influenciado en gran medida por el comportamiento de tiempo de ejecución de JavaScript. Por ejemplo, el operador de adición (+), que en JavaScript puede realizar una concatenación de cadena o adición numérica, se modela de la misma manera en TypeScript:
 
 ```typescript
-const result = '1' + 1; // Result is of type string
+const result = '1' + 1; // Resulta en tipo string
 
 ```
 
-The team behind TypeScript has made a deliberate decision to flag unusual usage of JavaScript as errors. For instance, consider the following valid JavaScript code:
+El equipo detrás de TypeScript ha tomado una decisión deliberada de marcar el uso inusual de JavaScript como errores. Por ejemplo, considere el siguiente código JavaScript válido:
 
 <!-- skip -->
 ```typescript
-const result = 1 + true; // In JavaScript, the result is equal 2
+const result = 1 + true; // In JavaScript, el resultado es igual a 2
 
 ```
 
-However, TypeScript throws an error:
+Sin embargo, TypeScript arroja un error:
 
 Operator '+' cannot be applied to types 'number' and 'boolean'.
 
-This error occurs because TypeScript strictly enforces type compatibility, and in this case, it identifies an invalid operation between a number and a boolean.
+Este error ocurre porque TypeScript aplica estrictamente la compatibilidad de tipo, y en este caso, identifica una operación no válida entre un número y un booleano.
 
-### TypeScript code generation
+### La generación de código con TypeScript
 
-The TypeScript compiler has two main responsibilities: checking for type errors and compiling to JavaScript. These two processes are independent of each other. Types do not affect the execution of the code in a JavaScript engine, as they are completely erased during compilation. TypeScript can still output JavaScript even in the presence of type errors.
-Here is an example of TypeScript code with a type error:
+El compilador TypeScript tiene dos responsabilidades principales: verificación de errores de tipo y compilar a JavaScript. Estos dos procesos son independientes entre sí. Los tipos no afectan la ejecución del código en un motor JavaScript, ya que se borran por completo durante la compilación.TypeScript todavía puede generar JavaScript incluso en presencia de errores de tipo.
+
+Aquí hay un ejemplo de código TypeScript con un error de tipo:
 
 <!-- skip -->
 ```typescript
@@ -322,7 +323,7 @@ const result = add('x', 'y'); // Argument of type 'string' is not assignable to 
 
 ```
 
-However, it can still produce executable JavaScript output:
+Sin embargo, aún puede producir salida de JavaScript ejecutable:
 
 <!-- skip -->
 ```typescript
@@ -332,7 +333,7 @@ const result = add('x', 'y'); // xy
 
 ```
 
-It is not possible to check TypeScript types at runtime. For example:
+No es posible verificar los tipos de escritura en tiempo de ejecución. Por ejemplo:
 
 <!-- skip -->
 ```typescript
@@ -347,14 +348,14 @@ interface Cat extends Animal {
 }
 const makeNoise = (animal: Animal) => {
     if (animal instanceof Dog) {
-        // 'Dog' only refers to a type, but is being used as a value here.
+        // 'Dog' Solo se refiere a un tipo, pero se está utilizando como un valor aquí.
         // ...
     }
 };
 
 ```
 
-As the types are erased after compilation, there is no way to run this code in JavaScript. To recognize types at runtime, we need to use another mechanism. TypeScript provides several options, with a common one being "tagged union". For example:
+Como los tipos se borran después de la compilación, no hay forma de ejecutar este código en JavaScript. Para reconocer los tipos en tiempo de ejecución, necesitamos usar otro mecanismo. TypeScript proporciona varias opciones, con una "unión etiquetada" común. Por ejemplo:
 
 ```typescript
 interface Dog {
@@ -383,11 +384,11 @@ makeNoise(dog);
 
 ```
 
-The property "kind" is a value that can be used at runtime to distinguish between objects in JavaScript.
+La propiedad "Kind" es un valor que se puede usar en tiempo de ejecución para distinguir entre objetos en JavaScript.
 
-It is also possible for a value at runtime to have a type different from the one declared in the type declaration. For instance, if the developer has misinterpreted an API type and annotated it incorrectly.
+También es posible que un valor en tiempo de ejecución tenga un tipo diferente al declarado en la declaración de tipo. Por ejemplo, si el desarrollador ha malinterpretado un tipo de API y lo anotó incorrectamente.
 
-TypeScript is a superset of JavaScript, so the "class" keyword can be used as a type and value at runtime.
+TypeScript es un superset de JavaScript, por lo que la palabra clave "clase" se puede usar como un tipo y valor en tiempo de ejecución.
 
 ```typescript
 class Animal {
@@ -418,33 +419,33 @@ makeNoise(dog);
 
 ```
 
-In JavaScript, a "class" has a "prototype" property, and the "instanceof" operator can be used to test if the prototype property of a constructor appears anywhere in the prototype chain of an object.
+En JavaScript, una "class" tiene una propiedad "prototype", y el operador "instaceof" se puede usar para probar si la propiedad prototype de un constructor aparece en cualquier parte de la cadena prototype de un objeto.
 
-TypeScript has no effect on runtime performance, as all types will be erased. However, TypeScript does introduce some build time overhead.
+TypeScript no tiene ningún efecto en el rendimiento del tiempo de ejecución, ya que se borrarán todos los tipos. Sin embargo, TypeScript introduce algunos gastos generales de tiempo de compilación.
 
-### Modern JavaScript Now (Downleveling)
+### Javascript moderno ahora (De nivel)
 
-TypeScript can compile code to any released version of JavaScript since ECMAScript 3 (1999). This means that TypeScript can transpile code from the latest JavaScript features to older versions, a process known as downleveling. This allows the usage of modern JavaScript while maintaining maximum compatibility with older runtime environments.
+TypeScript puede compilar el código en cualquier versión lanzada de JavaScript desde ECMAScript 3 (1999). Esto significa que TypeScript puede transpilar el código de las últimas funciones de JavaScript a versiones anteriores, un proceso conocido como nivel de corriente. Esto permite el uso de JavaScript moderno al tiempo que mantiene la máxima compatibilidad con entornos de tiempo de ejecución más antiguos.
 
-It's important to note that during transpilation to an older version of JavaScript, TypeScript may generate code that could incur a performance overhead compared to native implementations.
+Es importante tener en cuenta que durante la transpilación a una versión anterior de JavaScript, TypeScript puede generar un código que podría incurrir en una sobrecarga de rendimiento en comparación con las implementaciones nativas.
 
-Here are some of the modern JavaScript features that can be used in TypeScript:
-_ ECMAScript modules instead of AMD-style "define" callbacks or CommonJS "require" statements.
-_ Classes instead of prototypes.
-_ Variables declaration using "let" or "const" instead of "var".
-_ "for-of" loop or ".forEach" instead of the traditional "for" loop.
-_ Arrow functions instead of function expressions.
-_ Destructuring assignment.
-_ Shorthand property/method names and computed property names.
-_ Default function parameters.
+Estas son algunas de las características modernas de JavaScript que se pueden usar en TypeScript:
+_ Módulos ECMAScript en lugar de declaraciones AMD-style "define" callbacks o CommonJS "require" .
+_ Clases en lugar de prototypes.
+_ Declaración de variables de tipo "let" o "const" en lugar de "var".
+_ Bucle "for-of" o ".forEach" en lugar del tradicional bucle "for".
+_ Funciones de flecha en lugar de Expresiones de funciones.
+_ Tareas de destructuración.
+_ Propiedad de taquigrafía/nombres de métodos y nombres de propiedad calculados.
+_ Parámetros predeterminados de función.
 
-By leveraging these modern JavaScript features, developers can write more expressive and concise code in TypeScript.
+Al aprovechar estas características modernas de JavaScript, los desarrolladores pueden escribir un código más expresivo y conciso en TypeScript.
 
-## Getting Started With TypeScript
+## Comenzando con TypeScript
 
-### Installation
+### Instalación
 
-Visual Studio Code provides excellent support for the TypeScript language but does not include the TypeScript compiler. To install the TypeScript compiler, you can use a package manager like npm or yarn:
+Visual Studio Code proporciona un excelente soporte para el lenguaje TypeScript, pero no incluye el compilador TypeScript. Para instalar el compilador TypeScript, puede usar un administrador de paquetes como npm o yarn:
 
 ```shell
 npm install typescript --save-dev
@@ -456,9 +457,9 @@ or
 yarn add typescript --dev
 ```
 
-Make sure to commit the generated lockfile to ensure that every team member uses the same version of TypeScript.
+Asegurese de comitear el archivos lock generado para que cada miembro del equipo tenga la misma versión de TypeScript.
 
-To run the TypeScript compiler, you can use the following commands
+Para ejecutar el compilador TypeScript, puede usar los siguientes comandos
 
 ```shell
 npx tsc

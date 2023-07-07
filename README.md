@@ -1,11 +1,19 @@
 # The Concise TypeScript Book
 
+<p>
+    El libro Conciso de TypeScript proporciona una visión general integral y sucinta de las capacidades de TypeScript. Ofrece explicaciones claras que cubren todos los aspectos que se encuentran en la última versión del idioma, desde su poderoso sistema de tipo hasta características avanzadas. Ya sea que seas un desarrollador inicial o un desarrollador experimentado, este libro es un recurso invaluable para mejorar su comprensión y competencia en TypeScript.
+
+</p>
+
+Este libro es completamente gratuito y de código abierto.
+
 ## Original Source
 - [typescript-book](https://github.com/gibbok/typescript-book)
 
-El libro Conciso de TypeScript proporciona una visión general integral y sucinta de las capacidades de TypeScript. Ofrece explicaciones claras que cubren todos los aspectos que se encuentran en la última versión del idioma, desde su poderoso sistema de tipo hasta características avanzadas. Ya sea que seas un desarrollador inicial o un desarrollador experimentado, este libro es un recurso invaluable para mejorar su comprensión y competencia en TypeScript.
+## Traductores
 
-Este libro es completamente gratuito y de código abierto.
+| [<img src="https://avatars.githubusercontent.com/u/12578228?v=4" width=75><br><sub>Carlos Quintero</sub>](https://github.com/xfxstudios) |
+| :---: |
 
 ## Tabla de contenidos
 

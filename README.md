@@ -1,10 +1,13 @@
 # The Concise TypeScript Book
 
-The Concise TypeScript Book provides a comprehensive and succinct overview of TypeScript's capabilities. It offers clear explanations covering all aspects found in the latest version of the language, from its powerful type system to advanced features. Whether you're a beginner or an experienced developer, this book is an invaluable resource to enhance your understanding and proficiency in TypeScript.
+## Original Source
+- [typescript-book](https://github.com/gibbok/typescript-book)
 
-This book is completely Free and Open Source.
+El libro Conciso de TypeScript proporciona una visión general integral y sucinta de las capacidades de TypeScript. Ofrece explicaciones claras que cubren todos los aspectos que se encuentran en la última versión del idioma, desde su poderoso sistema de tipo hasta características avanzadas. Ya sea que seas un desarrollador inicial o un desarrollador experimentado, este libro es un recurso invaluable para mejorar su comprensión y competencia en TypeScript.
 
-## Table of content
+Este libro es completamente gratuito y de código abierto.
+
+## Tabla de contenidos
 
 - [The Concise TypeScript Book](#the-concise-typescript-book)
   - [Table of content](#table-of-content)
@@ -214,40 +217,40 @@ This book is completely Free and Open Source.
 
 ## Introduction
 
-Welcome to The Concise TypeScript Book! This guide equips you with essential knowledge and practical skills for effective TypeScript development. Discover key concepts and techniques to write clean, robust code. Whether you're a beginner or an experienced developer, this book serves as both a comprehensive guide and a handy reference for leveraging TypeScript's power in your projects. 
+¡Bienvenido al libro Conciso de TypeScript!, Esta guía lo equipa con conocimientos esenciales y habilidades prácticas para un desarrollo de typescript efectivo. Descubra conceptos y técnicas clave para escribir un código limpio y robusto. Ya sea que sea un desarrollador o un desarrollador experimentado, este libro sirve como una guía integral y una referencia útil para aprovechar el poder de TypeScript en sus proyectos.
 
-## About the author
+## Sobre el Autor
 
-Simone Poggiali is an experienced Senior Front-end Developer with a passion for writing professional-grade code since the 90s. Throughout his international career, he has contributed to numerous projects for a wide range of clients, from startups to large organizations. Notable companies such as HelloFresh, Siemens, O2, and Leroy Merlin have benefited from his expertise and dedication.
+Simone Poggiali es un desarrollador de front-end senior experimentado con pasión por escribir código de grado profesional desde los años 90. A lo largo de su carrera internacional, ha contribuido a numerosos proyectos para una amplia gama de clientes, desde nuevas empresas hasta organizaciones grandes. Empresas notables como HelloFresh, Siemens, O2 y Leroy Merlín se han beneficiado de su experiencia y dedicación.
 
-You can reach Simone Poggiali on the following platforms:
+Puede llegar a Simone Poggiali en las siguientes plataformas:
 
 - LinkedIn: https://www.linkedin.com/in/simone-poggiali
 - GitHub: https://github.com/gibbok
 - Twitter: https://twitter.com/gibbok_coding
 - Email: gibbok.coding📧gmail.com
 
-## TypeScript an introduction
+## Introducción a TypeScript
 
-### What is TypeScript?
+### Que es TypeScript?
 
-TypeScript is a strongly typed programming language that builds on JavaScript. It was originally designed by Anders Hejlsberg in 2012 and is currently developed and maintained by Microsoft as an open source project.
+TypeScript es un lenguaje de programación fuertemente escrito que se basa en JavaScript. Fue diseñado originalmente por Anders Hejlsberg en 2012 y actualmente está desarrollado y mantenido por Microsoft como un proyecto de código abierto.
 
-TypeScript compiles to JavaScript and can be executed in any JavaScript engine (e.g., a browser or server Node.js).
+TypeScript se compila a JavaScript y se puede ejecutar en cualquier motor JavaScript (por ejemplo, un navegador o nodo del servidor.js).
 
-TypeScript supports multiple programming paradigms such as functional, generic, imperative, and object-oriented. TypeScript is neither an interpreted nor a compiled language.
+TypeScript admite múltiples paradigmas de programación como funcional, genérico, imperativo y orientado a objetos. TypeScript no es un lenguaje interpretado ni compilado.
 
-### Why TypeScript?
+### Por qué TypeScript?
 
-TypeScript is a strongly typed language that helps prevent common programming mistakes and avoid certain kinds of run-time errors before the program is executed.
+TypeScript es un lenguaje fuertemente escrito que ayuda a prevenir errores de programación comunes y evitar ciertos tipos de errores de tiempo de ejecución antes de ejecutar el programa.
 
-A strongly typed language allows the developer to specify various program constraints and behaviors in the data type definitions, facilitating the ability to verify the correctness of the software and prevent defects. This is especially valuable in large-scale applications.
+Un lenguaje fuertemente escrito permite al desarrollador especificar diversas restricciones y comportamientos del programa en las definiciones de tipo de datos, facilitar la capacidad de verificar la corrección del software y prevenir defectos. Esto es especialmente valioso en aplicaciones a gran escala.
 
-Some of the benefits of TypeScript:
-- Static typing, optionally strongly typed
-- Type Inference
-- Access to ES6 and ES7 features
-- Cross-Platform and Cross-browser Compatibility \* Tooling support with IntelliSense
+Algunos de los beneficios deTypeScript:
+- Tipificación estática, opcionalmente fuertemente escrita
+- Tipo de inferencia
+- Acceso a las funciones de ES6 y ES7
+- Compatibilidad multiplataforma y de navegador cruzado \* Soporte de herramientas con IntelliSense
 
 ### TypeScript and JavaScript
 
